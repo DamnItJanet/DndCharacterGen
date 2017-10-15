@@ -3,24 +3,24 @@
 // September 6th, 2017
 
 public class Character {
-    String name = "";
-    String race = "";
-    String class = "";
-    String path = "No path chosen yet";
-    int skills[] = new int[6];
-    int modifiers[] = new int[6];
-    int health = 0;
+    static String name = "";
+    static String race = "";
+    static String clas = "";
+    static String path = "No path chosen yet";
+    static int skills[] = new int[6];
+    static int modifiers[] = new int[6];
+    static int health = 0;
 
     public static void setName(String newName) {
-        this.name = newName;
+        name = newName;
     }
 
     public static void setRace(String newRace) {
-        this.race = newRace;
+        race = newRace;
     }
 
     public static void setClass(String newClass) {
-        this.class = newClass;
+        clas = newClass;
     }
 
     public static void setStats(int[] newSkills) {
@@ -49,7 +49,7 @@ public class Character {
     }
 
     public static void calculateHealth() {
-        switch (class) {
+        switch (clas) {
             case "Barbarian":
                 health = 12 + modifiers[2];
                 break;
@@ -103,7 +103,7 @@ public class Character {
     public static void printCharacterDetails() {
         System.out.println("Name: " + name);
         System.out.println("Race: " + race);
-        System.out.println("Class: " + class);
+        System.out.println("Class: " + clas);
         System.out.println("Strength: " + skills[0]);
         System.out.println("Dexterity: " + skills[1]);
         System.out.println("Constitution: " + skills[2]);

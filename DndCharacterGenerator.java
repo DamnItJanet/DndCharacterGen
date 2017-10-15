@@ -8,14 +8,13 @@ import java.util.Scanner;
 
 public class DndCharacterGenerator {
 
-
-    Character character = new Character();
-    Scanner input = new Scanner(System.in);
+    static Character character = new Character();
+    static Scanner input = new Scanner(System.in);
 
     public static int[] rollStats() {
         Random dice = new Random();
-        int skills[] = new Int[6];
-        int rolls[] = new Int[4];
+        int skills[] = new int[6];
+        int rolls[] = new int[4];
 
         // Roll each skill
         for (int i = 0; i < 6; i++) {
@@ -42,8 +41,7 @@ public class DndCharacterGenerator {
 
         // Choosing a race
         while (!validAnswer) {
-            System.out.println("Enter the number of the race you would you
-                like your character to be:");
+            System.out.println("Enter the number of the race you would you like your character to be:");
             System.out.println("\t1. Dragonborn");
             System.out.println("\t2. Dwarf");
             System.out.println("\t3. Elf");
@@ -73,8 +71,7 @@ public class DndCharacterGenerator {
             case 2:
                 while (subraceChoice != 1 && subraceChoice != 2) {
                     // Dwarf subrace choice
-                    System.out.println("What subrace would you like your Dwarf
-                        to be?");
+                    System.out.println("What subrace would you like your Dwarf to be?");
                     System.out.println("\t1. Hill Dwarf");
                     System.out.println("\t2. Mountain Dwarf");
 
@@ -92,8 +89,7 @@ public class DndCharacterGenerator {
             case 3:
                 while (subraceChoice != 1 && subraceChoice != 2 && subraceChoice != 3) {
                     // Elf subrace choice
-                    System.out.println("What subrace would you like your Elf
-                        to be?");
+                    System.out.println("What subrace would you like your Elf to be?");
                     System.out.println("\t1. High Elf");
                     System.out.println("\t2. Dark Elf");
                     System.out.println("\t3. Wood Elf");
@@ -114,8 +110,7 @@ public class DndCharacterGenerator {
             case 4:
                 while (subraceChoice != 1 && subraceChoice != 2) {
                     // Gnome subrace choice
-                    System.out.println("What subrace would you like your Gnome
-                        to be?");
+                    System.out.println("What subrace would you like your Gnome to be?");
                     System.out.println("\t1. Forest Gnome");
                     System.out.println("\t2. Rock Gnome");
 
@@ -143,8 +138,7 @@ public class DndCharacterGenerator {
             case 7:
                 while (subraceChoice != 1 && subraceChoice != 2) {
                     // Halfling subrace choice
-                    System.out.println("What subrace would you like your Halfling
-                        to be?");
+                    System.out.println("What subrace would you like your Halfling to be?");
                     System.out.println("\t1. Lightfoot Halfling");
                     System.out.println("\t2. Stout Halfling");
 
@@ -177,8 +171,7 @@ public class DndCharacterGenerator {
         boolean validAnswer = false;
 
         while (!validAnswer) {
-            System.out.println("Enter the number of the class you would you
-                like your character to be:");
+            System.out.println("Enter the number of the class you would you like your character to be:");
             System.out.println("\t1. Barbarian");
             System.out.println("\t2. Bard");
             System.out.println("\t3. Cleric");
@@ -266,8 +259,7 @@ public class DndCharacterGenerator {
     }
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the Dungeons and Dragons 5th edition
-            character generator!\n");
+        System.out.println("Welcome to the Dungeons and Dragons 5th edition character generator!\n");
 
         int skills[] = rollStats();
         chooseRace();
