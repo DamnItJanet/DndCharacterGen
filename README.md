@@ -1,5 +1,5 @@
 # DndCharacterGen
-A D&amp;D character generator written in Java
+A D&amp;D 5e character generator written in Java
 
 # Features to add
 - Ability score increases for all races
