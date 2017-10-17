@@ -54,6 +54,7 @@ public class DndCharacterGenerator {
 
             raceChoice = input.nextInt();
             input.nextLine();
+            System.out.println();
 
             if (raceChoice > 0 && raceChoice < 10)
                 validAnswer = true;
@@ -77,6 +78,7 @@ public class DndCharacterGenerator {
 
                     subraceChoice = input.nextInt();
                     input.nextLine();
+                    System.out.println();
                 }
 
                 if (subraceChoice == 1)
@@ -96,6 +98,7 @@ public class DndCharacterGenerator {
 
                     subraceChoice = input.nextInt();
                     input.nextLine();
+                    System.out.println();
                 }
 
                 if (subraceChoice == 1)
@@ -116,6 +119,7 @@ public class DndCharacterGenerator {
 
                     subraceChoice = input.nextInt();
                     input.nextLine();
+                    System.out.println();
                 }
 
                 if (subraceChoice == 1)
@@ -144,6 +148,7 @@ public class DndCharacterGenerator {
 
                     subraceChoice = input.nextInt();
                     input.nextLine();
+                    System.out.println();
                 }
 
                 if (subraceChoice == 1)
@@ -187,6 +192,7 @@ public class DndCharacterGenerator {
 
             classChoice = input.nextInt();
             input.nextLine();
+            System.out.println();
 
             if (classChoice >= 1 && classChoice <= 12)
                 validAnswer = true;
@@ -266,6 +272,9 @@ public class DndCharacterGenerator {
         chooseClass();
         character.setStats(skills);
         character.calculateHealth();
+        character.chooseName();
+
+        character.printCharacterDetails();
 
     }
 }

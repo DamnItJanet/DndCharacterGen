@@ -14,8 +14,10 @@ public class Character {
     static int modifiers[] = new int[6];
     static int health = 0;
 
-    public static void setName(String newName) {
-        name = newName;
+    public static void chooseName() {
+        System.out.println("What would you like to name your character?");
+        name = input.nextLine();
+        System.out.println();
     }
 
     public static void setRace(String newRace) {
@@ -44,10 +46,11 @@ public class Character {
                 System.out.println("\t3. Constitution");
                 System.out.println("\t4. Intelligence");
                 System.out.println("\t5. Wisdom");
-                System.out.println("\t6. Charisma\n");
+                System.out.println("\t6. Charisma");
 
                 choiceNum = input.nextInt() - 1;
                 input.nextLine();
+                System.out.println();
 
                 if (choiceNum >= 0 && choiceNum <= 5 && choices[choiceNum] == false) {
                     valid = true;
@@ -123,11 +126,11 @@ public class Character {
         System.out.println("Name: " + name);
         System.out.println("Race: " + race);
         System.out.println("Class: " + clas);
-        System.out.println("Strength: " + skills[0] + "\tModifier: " + modifiers[0]);
-        System.out.println("Dexterity: " + skills[1] + "\tModifier: " + modifiers[1]);
-        System.out.println("Constitution: " + skills[2] + "\tModifier: " + modifiers[2]);
-        System.out.println("Intelligence: " + skills[3] + "\tModifier: " + modifiers[3]);
-        System.out.println("Wisdom: " + skills[4] + "\tModifier: " + modifiers[4]);
-        System.out.println("Charisma: " + skills[5] + "\tModifier: " + modifiers[5]);
+        System.out.println("Str: " + skills[0] + "\t\tModifier: " + modifiers[0]);
+        System.out.println("Dex: " + skills[1] + "\t\tModifier: " + modifiers[1]);
+        System.out.println("Con: " + skills[2] + "\t\tModifier: " + modifiers[2]);
+        System.out.println("Int: " + skills[3] + "\t\tModifier: " + modifiers[3]);
+        System.out.println("Wis: " + skills[4] + "\t\tModifier: " + modifiers[4]);
+        System.out.println("Cha: " + skills[5] + "\t\tModifier: " + modifiers[5]);
     }
 }
