@@ -20,7 +20,7 @@ public class DndCharacterGenerator {
         for (int i = 0; i < 6; i++) {
             // Roll four D6
             for (int j = 0; j < 4; j++)
-                rolls[j] = dice.nextInt(5) + 1;
+                rolls[j] = dice.nextInt(6) + 1;
 
             // Sort the numbers
             Arrays.sort(rolls);
